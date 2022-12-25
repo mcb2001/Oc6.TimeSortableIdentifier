@@ -4,6 +4,37 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Oc6 Time sortable identifier</Title>
+    <Authors>Marc Barnholdt</Authors>
+    <Company>Oc6</Company>
+    <Description>An implementation of a Time sortable identifier</Description>
+    <Copyright>2022 Marc Barnholdt</Copyright>
+    <PackageProjectUrl>https://github.com/mcb2001/Oc6.TimeSortableIdentifier</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/mcb2001/Oc6.TimeSortableIdentifier</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

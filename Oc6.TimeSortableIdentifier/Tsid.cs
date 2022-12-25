@@ -5,6 +5,14 @@ using System.Text.RegularExpressions;
 
 namespace Oc6.TimeSortableIdentifier
 {
+    /// <summary>
+    /// <para>Time Sortable Unique Identifier</para>
+    /// <para>64 integer (long)</para>
+    /// <para>First 42 bits is the current millis since epoch</para>
+    /// <para>Next 8 bits is a counter</para>
+    /// <para>Last 14 bits is randomness</para>
+    /// <para>Guarenteed to generate 255 sortable unique tsids every millisecond</para>
+    /// </summary>
     public static partial class Tsid
     {
         //Grouped in (2)(2)-(2)(2)-(2)(2)-(2)(2) for faster TryParse
@@ -25,6 +33,10 @@ namespace Oc6.TimeSortableIdentifier
         private static readonly Regex parserRegex = GenerateParserRegex();
         private static readonly object syncRoot = new();
 
+        /// <summary>
+        /// Creates a new Time Sortable Unique Identifier as a <see cref="System.Int64"/>
+        /// </summary>
+        /// <returns></returns>
         public static long Create()
         {
             lock (syncRoot)
@@ -63,6 +75,13 @@ namespace Oc6.TimeSortableIdentifier
             }
         }
 
+        /// <summary>
+        /// <para>Tries to parse a given string as a tsid</para>
+        /// <para>The parser is case insensetive</para>
+        /// </summary>
+        /// <param name="tsid">The string containing the value to parse</param>
+        /// <param name="result">The result if the parse was successful</param>
+        /// <returns>true if successful, false if not successful</returns>
         public static bool TryParse(string tsid, out long result)
         {
             if (tsid.Length != 19)
@@ -103,6 +122,12 @@ namespace Oc6.TimeSortableIdentifier
             return true;
         }
 
+        /// <summary>
+        /// <para>Returns an uppercase string representation of this tsid</para>
+        /// </summary>
+        /// <param name="tsid">The value to get a string representation of</param>
+        /// <returns>The string representation of the provided value</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If tsid is negative</exception>
         public static string ToString(long tsid)
         {
             if (tsid < 0)
