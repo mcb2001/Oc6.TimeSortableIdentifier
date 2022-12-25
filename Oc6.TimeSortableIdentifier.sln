@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oc6.TimeSortableIdentifier", "Oc6.TimeSortableIdentifier\Oc6.TimeSortableIdentifier.csproj", "{A5588A24-4D8E-42BD-9F00-247CF93DAAEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oc6.TimeSortableIdentifier.Tests", "Oc6.TimeSortableIdentifier.Tests\Oc6.TimeSortableIdentifier.Tests.csproj", "{77241C9C-77CD-47AB-A275-9BC33E24E0E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5588A24-4D8E-42BD-9F00-247CF93DAAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5588A24-4D8E-42BD-9F00-247CF93DAAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5588A24-4D8E-42BD-9F00-247CF93DAAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5588A24-4D8E-42BD-9F00-247CF93DAAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77241C9C-77CD-47AB-A275-9BC33E24E0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77241C9C-77CD-47AB-A275-9BC33E24E0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77241C9C-77CD-47AB-A275-9BC33E24E0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77241C9C-77CD-47AB-A275-9BC33E24E0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BB0CCA6-5DA1-495D-80C0-275A15B20EE4}
+	EndGlobalSection
+EndGlobal
