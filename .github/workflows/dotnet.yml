@@ -23,10 +23,12 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore -c Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack Oc6.TimeSortableIdentifier/Oc6.TimeSortableIdentifier/Oc6.TimeSortableIdentifier.csproj -c Release
+      run: dotnet pack Oc6.TimeSortableIdentifier/Oc6.TimeSortableIdentifier.csproj -c Release
     - name: Prep packages
       run: dotnet nuget add source --username mcb2001 --password ${{ secrets.PACKAGE_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/mcb2001/index.json"
+    - name: Publish to GitHub packages
+      run: dotnet nuget push Oc6.TimeSortableIdentifier/bin/Release/*.nupkg --api-key ${{ secrets.PACKAGE_TOKEN }}  --source "github"
